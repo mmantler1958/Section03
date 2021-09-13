@@ -13,8 +13,12 @@ function informAboutSale(name) {
 
 // function that takes a callback function as an argument
 function getNameAndShowMessage(callback) {
-  const name = prompt("Please Enter Your Name: ");
+  let name = prompt('Please Enter Your Name: ');
   alert(callback(name));
 }
 
 // pass each "regular" function into getAndShowMessage as a callback function
+
+getNameAndShowMessage(greet);
+getNameAndShowMessage(welcome);
+getNameAndShowMessage(informAboutSale);
