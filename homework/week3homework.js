@@ -11,7 +11,7 @@ const pizzaObject = {
 function greetCustomer() {
   console.log(greeting);
 }
-//greetCustomer();
+
 
 function getPizzaOrder(size, crust, ...toppings) {
   pizzaObject.size = size;
@@ -21,7 +21,10 @@ function getPizzaOrder(size, crust, ...toppings) {
     `One ${pizzaObject.size} ${pizzaObject.crust} crust pizza with ${pizzaObject.toppings} coming up!`
   );
 }
-
+function listToppings(pizzaToppings) {
+  
+  return
+}
 function preparePizza([size, crust, ...toppings]) {
   pizzaObject.size = size;
   pizzaObject.crust = crust;
@@ -36,11 +39,13 @@ function preparePizza([size, crust, ...toppings]) {
     pizzaObject.toppings
   );
 }
+ 
+
 
 greetCustomer();
 
-getPizzaOrder('large', 'thick', 'ham', 'sausage');
-preparePizza(['large', 'thick', 'ham', 'sausage']);
+getPizzaOrder('large', 'thick', 'ham', 'sausage',"onion");
+preparePizza(['large', 'thick', 'ham', 'sausage', 'onion']);
 
 function servPizza(pizzaObject) {
   console.log(
@@ -49,4 +54,18 @@ function servPizza(pizzaObject) {
   console.log('pizzaObject=', pizzaObject);
 }
 
-servPizza(pizzaObject);
+//BONUS
+// Bonus Challenge
+// Figure out how to add "and" before the last topping in a list of toppings so when we list toppings it is more grammatically correct. You could create a listToppings function that stores the functionality, and call the function each time we list toppings in a function.
+// i.e. "Our toppings are a, b, and c." instead of "Our toppings are a, b, c"
+// In getPizzaOrder, if an order is placed with no toppings, print a slightly different message, like "One large thick crust cheese pizza coming up!" (Instead of "One large thick crust pizza with coming up!"). Alter servePizza in a similar way to fix its grammar when serving a "plain" cheese pizza.
+// In getPizzaOrder, check the toppings the customer ordered against your list of available toppings. If they order a topping you don't offer, print a message that informs them you don't offer that topping and to order again.
+// An example output for this assignment is:
+
+// Welcome to The Pizza House, our toppings are: pepperoni, sausage, onions, peppers, One large thin crust pizza with sausage, onions, peppers, . Coming up! ...your pizza is cooking... Order up! Here's your large thin crust pizza with sausage, onions, peppers, . Enjoy!
+
+// {
+//   size: 'small',
+//   crust: 'thin',
+//   toppings: [ 'mushrooms', 'banana peppers' ]
+// }
